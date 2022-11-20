@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <main class="app">
+
+        <!-- GREETING -->
+        <section class="greeting">
+            <h2 class="title">What's up!</h2>
+            <input type="text" id="name" placeholder="Name here">
+        </section>
+
+        <!--CREATE NEW TO DO-->
+        <section class="create-todo">
+            <h3>CREATE TODO</h3>
+
+            <!-- TODO FORM -->
+            <form id="new-todo-form">
+                <h4>What's on your todo list?</h4>
+                <input type="text" name="content" id="content" placeholder="example: make a video">
+
+                <!--PICK A NEW TODO CATEGORY-->
+                <h4>Pick a category:</h4>
+                <div class="options">
+
+                    <!-- Business Option -->
+                    <label>
+                        <input type="radio" name="category" id="category1" value="business">
+                    </label>
+                    <span class="bubble business"></span>
+                    <div>Business</div>
+
+                    <!-- Personal Option -->
+                    <label>
+                        <input type="radio" name="category" id="category2" value="personal">
+                    </label>
+                    <span class="bubble personal"></span>
+                    <div>Personal</div>
+
+                </div>
+            </form>
+        </section>
+
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
