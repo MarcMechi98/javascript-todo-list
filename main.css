@@ -1,0 +1,66 @@
+:root {
+    --primary: #EA40A4;
+    --personal: var(--primary);
+    --business: #3A82EE;
+    --light: #EEE;
+    --dark: #313154;
+    --gray: #888;
+    --danger: #ff5b57;
+
+    --shadow: 0 1px 3px rgba(0, 0, 0, .1);
+
+    --business-glow: 0 0 4px rgba(58, 130, 238, .75);
+    --personal-glow: 0 0 4px rgba(234, 64, 164, .75);
+}
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+}
+
+section {
+    margin: 2rem 0;
+    padding: 0 1.5rem;
+}
+
+h3 {
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+h4 {
+    color: var(--gray);
+    font-size: .875rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+/* GREETING SECTION */
+.greeting .title {
+    display: flex;
+}
+
+.greeting .title input {
+    margin-left: .5rem;
+    flex: 1 1 0;
+    min-width: 0;
+}
