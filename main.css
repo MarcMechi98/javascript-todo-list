@@ -148,3 +148,89 @@ input:checked~.bubble::after {
     height: 10px;
     opacity: 1;
 }
+
+.create-todo .options label div {
+    color: var(--dark);
+    font-size: 1.125rem;
+    margin-top: .8rem;
+}
+
+.create-todo input[type="submit"] {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: white;
+    background-color: var(--primary);
+    border-radius: .5rem;
+    box-shadow: var(--personal-glow);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.create-todo input[type="submit"]:hover {
+    opacity: .75;
+}
+
+/* TODO LIST */
+.todo-list .list {
+    margin: 1rem 0;
+}
+
+.todo-list .todo-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+}
+
+.todo-item label {
+    display: block;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.todo-item .todo-content {
+    flex: 1 1 0;
+}
+
+.todo-item .todo-content input {
+    color: var(--dark);
+    font-size: 1.125rem;
+}
+
+.todo-item .actions {
+    display: flex;
+    align-items: center;
+}
+
+.todo-item .actions button {
+    padding: .5rem;
+    display: block;
+    border-radius: .25rem;
+    color: white;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.todo-item .actions button:hover {
+    opacity: .75;
+}
+
+.todo-item .actions .edit {
+    margin-right: .5rem;
+    background-color: var(--primary);
+}
+
+.todo-item .actions .delete {
+    background-color: var(--danger);
+}
+
+/* Crossing an item from the list */
+.todo-item.done .todo-content input {
+    text-decoration: line-through;
+    color: var(--gray);
+}
