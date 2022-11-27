@@ -26,6 +26,12 @@ body {
     color: var(--dark);
 }
 
+/* MODIFICAR AQUI */
+.app {
+    width: 60%;
+    margin: auto;
+}
+
 input:not([type="radio"]):not([type="checkbox"]),
 button {
     appearance: none;

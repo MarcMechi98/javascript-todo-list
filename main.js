@@ -1,3 +1,4 @@
+//Loading up the page
 window.addEventListener('load', () => {
     todos = JSON.parse(localStorage.getItem('todos')) || [];
     const nameInput = document.querySelector('#name');
@@ -29,6 +30,8 @@ window.addEventListener('load', () => {
 
         displayTodos();
     });
+
+    displayTodos();
 });
 
 //Making the todo list show up
@@ -95,16 +98,28 @@ function displayTodos() {
                 todoItem.classList.add('done');
             }
             todoItem.classList.remove('done');
-
             displayTodos();
         })
 
         //Making the "edit" button work
+        editButton.addEventListener('click', e => {
+            const input = content.querySelector('input');
+            input.removeAttribute('readonly');
+            input.focus();
 
+            input.addEventListener('blur', e => {
+                input.setAttribute('readonly', true);
+                todo.content = e.target.value;
+                localStorage.setItem('todos', JSON.stringify(todos));
+                displayTodos();
+            });
+        });
 
-
-
-
-
+        //Making the "delete" button work
+        deleteButton.addEventListener('click', e => {
+            todos = todos.filter(t => t !== todo);
+            localStorage.setItem('todos', JSON.stringify(todos));
+            displayTodos();
+        });
     });
 }
