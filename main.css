@@ -1,16 +1,16 @@
 :root {
-    --primary: #EA40A4;
-    --business: #3A82EE;
+    --primary: #06d6a0;
+    --business: #f15bb5;
     --personal: var(--primary);
-    --light: #EEE;
+    --light: #f1faee;
     --dark: #313154;
     --gray: #888;
-    --danger: #ff5b57;
+    --danger: #ef476f;
 
     --shadow: 0 1px 3px rgba(0, 0, 0, .1);
 
-    --business-glow: 0 0 4px rgba(58, 130, 238, .75);
-    --personal-glow: 0 0 4px rgba(234, 64, 164, .75);
+    --business-glow: 0 0 4px rgba(241, 91, 181, .75);
+    --personal-glow: 0 0 4px rgba(6, 214, 160, .75);
 }
 
 /* GENERAL */
@@ -28,8 +28,20 @@ body {
 
 /* MODIFICAR AQUI */
 .app {
-    width: 60%;
+    width: 90%;
     margin: auto;
+}
+
+@media (min-width: 768px) {
+    .app {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .app {
+        width: 55%;
+    }
 }
 
 input:not([type="radio"]):not([type="checkbox"]),
@@ -79,6 +91,8 @@ h4 {
 }
 
 /* CREATE TO DO SECTION */
+
+/* Input */
 .create-todo input[type="text"] {
     display: block;
     width: 100%;
@@ -91,6 +105,11 @@ h4 {
     margin-bottom: 1.5rem;
 }
 
+::placeholder {
+    opacity: .75;
+}
+
+/* Categories */
 .create-todo .options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

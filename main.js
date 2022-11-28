@@ -40,8 +40,10 @@ function displayTodos() {
 
     todoList.innerHTML = '';
 
-    todos.forEach(todo => {
+    //Sorting the todos by date
+    todos.sort((a, b) => b.createdAt - a.createdAt);
 
+    todos.forEach(todo => {
         //Creating the elements
         const todoItem = document.createElement('div');
         todoItem.classList.add('todo-item');
